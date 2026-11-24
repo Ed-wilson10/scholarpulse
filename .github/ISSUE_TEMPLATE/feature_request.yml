@@ -1,0 +1,55 @@
+name: Feature request
+description: Suggest a new feature or an improvement.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem first, then the solution. Keep the scope small enough for one
+        pull request.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Who is affected, and what is painful today?
+      placeholder: Students cannot tell which documents change between providers...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      placeholder: Add a document checklist comparison on the detail page...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Backend / API
+        - Frontend / web
+        - Admin portal
+        - Chatbot
+        - Database
+        - Documentation / repository
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues.
+          required: true
+        - label: This is one focused feature, not several unrelated changes.
+          required: true
